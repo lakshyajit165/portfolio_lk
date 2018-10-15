@@ -1,0 +1,18 @@
+{
+  "name": "lk-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "LK",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "nodemailer": "^4.6.8",
+    "nodemon": "^1.18.4"
+  }
+}
