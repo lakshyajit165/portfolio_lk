@@ -76,7 +76,7 @@ app.post('/send', (req,res) => {
                 // Preview only available when sending through an Ethereal account
                 console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-                res.render('home',{msg:'Message sent..Will get back to you soon!',val:'background-color: #AEF292; color: black;'});
+                res.render('home',{msg:'Message sent..Will get back to you soon!',val:'background: linear-gradient(to bottom, #C1FEA8 0%, #5ADF23 100%); color: black;'});
 
                 // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
                 // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
