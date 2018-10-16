@@ -38,11 +38,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 </head>
-{{#if msg}}
-<body id="top" onload="myFunction()">
-{{else}}
+
 <body id="top">
-{{/if}}
+
 	<!-- header 
    ================================================== -->
    <header>   	
@@ -98,32 +96,7 @@
 	   			</p>-->
 
 	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
-               {{#if msg}}
-                  <!--<div class="alert" style='{{val}}'>
-                    <span class="closebtn">&times;</span> 
-                    <strong></strong> {{msg}}
-                  </div>-->
-                  <!-- The Modal -->
-                  <div id="myModal" class="modal animated bounceInUp">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h2>Hey {{val}}</h2>
-                      </div>
-                      <div class="modal-body">
-                        <p><b>{{msg}}</b></p>
-                        
-                      </div>
-                      <!--<div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                      </div>-->
-                    </div>
-
-                  </div>
-
-               {{/if}}  
+               
 	   		</div>  
    			   
    		</div>   
@@ -396,62 +369,11 @@
    			<h5>Contact</h5>
    			<h1>I'd Love To Hear From You.</h1>
 
-   			<p class="lead">Feel free to drop in a message below, if you consider me for a position!</p>
+   			<p class="lead">Feel free to contact me, if you consider me for a position!</p>
 
    		</div> 
    	</div> <!-- /section-intro -->
 
-   	<div class="row contact-form">
-
-   		<div class="col-twelve">
-
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="send">
-               <!--<div class="text-center mx-auto" role="alert" style="{{val}}">
-                  <b>{{msg}}</b>
-               </div>--> 
-              
-               
-      			<fieldset>
-
-                  <div class="form-field">
- 						   <input type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" name="name">
-                  </div>
-                  <div class="form-field">
-	      			   <input type="email" id="contactEmail" placeholder="Email" value="" required="" name="email">
-	               </div>
-                  <div class="form-field">
-	     				   <input type="text" id="contactSubject" placeholder="Phone" value="" name="phone">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea id="contactMessage" placeholder="Message" rows="10" cols="50" required="" name="message"></textarea>
-	               </div>                      
-                 <div class="form-field">
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
-								</div>
-							</div>
-                  </div>
-
-      			</fieldset>
-      		</form> <!-- Form End -->
-
-            <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
-
-         </div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /contact-form -->
 
    	<div class="row contact-info">
 
