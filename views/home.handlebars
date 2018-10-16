@@ -34,10 +34,15 @@
 	<!--font awesome cdn -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+   <!--animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 </head>
-
+{{#if msg}}
+<body id="top" onload="myFunction()">
+{{else}}
 <body id="top">
-
+{{/if}}
 	<!-- header 
    ================================================== -->
    <header>   	
@@ -94,10 +99,30 @@
 
 	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
                {{#if msg}}
-                  <div class="alert" style='{{val}}'>
+                  <!--<div class="alert" style='{{val}}'>
                     <span class="closebtn">&times;</span> 
                     <strong></strong> {{msg}}
+                  </div>-->
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal animated bounceInUp">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Hey {{val}}</h2>
+                      </div>
+                      <div class="modal-body">
+                        <p><b>{{msg}}</b></p>
+                        
+                      </div>
+                      <!--<div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                      </div>-->
+                    </div>
+
                   </div>
+
                {{/if}}  
 	   		</div>  
    			   
@@ -536,7 +561,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
 
 
-   <script>
+  <!-- <script>
    // Get all elements with class="closebtn"
    let close = document.getElementsByClassName("closebtn");
    let i;
@@ -556,10 +581,36 @@
            setTimeout(function(){ div.style.display = "none"; }, 1100);
        }
    }
+   </script>-->
+   {{#if msg}}
+   <script>
+   // Get the modal
+   const modal = document.getElementById('myModal');
+
+   // Get the button that opens the modal
+   //var btn = document.getElementById("myBtn");
+
+   // Get the <span> element that closes the modal
+   const span = document.getElementsByClassName("close")[0];
+
+   // When the user clicks the button, open the modal 
+   function myFunction(){
+       modal.style.display = "block";
+   }
+
+   // When the user clicks on <span> (x), close the modal
+   span.onclick = function() {
+       modal.style.display = "none";
+   }
+
+   // When the user clicks anywhere outside of the modal, close it
+   window.onclick = function(event) {
+       if (event.target == modal) {
+           modal.style.display = "none";
+       }
+   }
    </script>
-
-  
-
+   {{/if}}
 </body>
 
 </html>

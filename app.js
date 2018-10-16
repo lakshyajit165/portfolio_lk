@@ -69,14 +69,14 @@ app.post('/send', (req,res) => {
             // send mail with defined transport object
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
-                    res.render('home',{msg:'Message NOT sent...Please try again!',val:'background-color: #F77A74; color: white;'});
+                    res.render('home',{msg:'Message NOT sent...Please try again!',val:`${req.body.name}`});
                     return console.log(error);
                 }
                 console.log('Message sent: %s', info.messageId);
                 // Preview only available when sending through an Ethereal account
                 console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-                res.render('home',{msg:'Message sent..Will get back to you soon!',val:'background: linear-gradient(to bottom, #C1FEA8 0%, #5ADF23 100%); color: black;'});
+                res.render('home',{msg:'Message sent..Will get back to you soon!',val:`${req.body.name}`});
 
                 // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
                 // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
