@@ -446,7 +446,7 @@
 
       	<div class="col-six tab-full">
 	      	<div class="copyright">
-		        	<span>© Copyright <span id="date"></span>.</span> 
+		        	<span id="date"></span> 
 		        	<span>Designed by <a href="#">Elkay</a></span>	         	
 		         </div>		                  
 	      	</div>
@@ -479,7 +479,7 @@
         });
       });
 
-		document.getElementById("date").innerHTML = new Date().getFullYear();
+		document.getElementById("date").innerHTML = "&copy;" + "Copyright  " + new Date().getFullYear();
     </script>  
     
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
